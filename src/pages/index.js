@@ -1,6 +1,14 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import { useState } from "react";
-import { Button, Container, Image, Teste, Teste2, Teste3 } from "../styles/page.Styles";
+import {
+  Button,
+  Container,
+  Image,
+  Teste,
+  Teste2,
+  Teste3,
+} from "../styles/page.Styles";
 import BlueLogo from "../assets/Blue.svg";
 
 export default function Home() {
@@ -15,16 +23,15 @@ export default function Home() {
         <title>Blue Contabilidade</title>
         <link rel="icon" href="/Blue.svg" />
       </Head>
+      <Image src="job.jpg" />
       <Container color="rgba(23, 65, 149, 0.29)">
-       
-        <Image src="job.jpg" alt="HTML5 Icon" />
-        <Button onClick={utilizarBotao}>Mais Sobre</Button>
-       
+      
+        <Button onClick={utilizarBotao}>{somador}</Button>
       </Container>
+
       <Container color="green" />
       <Container color="red" />
       <Container color="yellow" />
-      <div style={{ height: "2000px" }} />
     </>
   );
 }

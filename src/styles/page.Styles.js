@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
-  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  height: 47vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,9 +11,14 @@ export const Container = styled.div`
   background-color: ${(props) => props.color};
 `;
 export const Image = styled.img`
-  width:100%;
-  height:100vh;
-  z-index: -2;
+   top: 7%;
+  @media screen and (max-width: 1440px) and (max-height: 845px) {
+    top: 12%;
+  }
+  width: 100vw;
+  height: auto;
+  z-index: -1;
+  position: fixed;
 `;
 
 export const Teste = styled.div`
@@ -23,18 +29,18 @@ export const Teste = styled.div`
 `;
 
 export const Teste2 = styled.div`
-position:absolute;
-    z-index:1;
+  position: absolute;
+  z-index: 1;
   height: 80px;
   width: 80px;
   background-color: ${(props) => props.theme.color.secundary};
 `;
 
 export const Button = styled.button`
-  position:absolute;
-  border:none;
+  position: absolute;
+  border: none;
   font-size: 1.2rem;
-  padding:15px 30px;
+  padding: 15px 30px;
   color: #ffff;
-  background-color: ${props=> props.theme.color.primary};
+  background-color: ${(props) => props.theme.color.primary};
 `;
