@@ -4,10 +4,10 @@ export const Nav = styled.header`
   display: flex;
   width: 100%;
   top: 0;
-  z-index: 1;
   height: 7rem;
   background-color: #ffff;
   position: sticky;
+  z-index: 2 ;
   .LogoBox {
     width: 7rem;
     height: 100%;

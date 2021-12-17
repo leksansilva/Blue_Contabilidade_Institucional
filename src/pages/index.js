@@ -14,7 +14,10 @@ import BlueLogo from "../assets/Blue.svg";
 export default function Home() {
   const [somador, setSomador] = useState(1);
   function utilizarBotao(ev, newValeu) {
-    setSomador(somador + 1);
+    let proximo =somador;
+    proximo= proximo + somador;
+    setSomador( proximo);
+    
   }
 
   return (
@@ -23,11 +26,11 @@ export default function Home() {
         <title>Blue Contabilidade</title>
         <link rel="icon" href="/Blue.svg" />
       </Head>
-      <Image src="job.jpg" />
-      <Container color="rgba(23, 65, 149, 0.29)">
-      
-        <Button onClick={utilizarBotao}>{somador}</Button>
-      </Container>
+      <Image>
+        <div className="details" >
+          <Button onClick={utilizarBotao} >{somador}</Button>
+          </div> 
+      </Image>
 
       <Container color="green" />
       <Container color="red" />
