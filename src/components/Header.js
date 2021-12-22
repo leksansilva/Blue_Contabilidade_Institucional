@@ -1,24 +1,77 @@
 /* eslint-disable @next/next/no-img-element */
 import { Nav } from "../styles/component.Styles";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineMenu } from "react-icons/ai";
-
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import BlueLogo from "../assets/Blue.svg";
+import { useState } from "react";
+import { Link } from "react-scroll";
 
 export default function Header() {
+  const [show, setShow] = useState(false);
+  const toggleMenu = () => {
+    setShow(!show);
+  };
+
   return (
-    <Nav>
-      <div className="LogoBox">
-        <img src="Blue.png" className="Logo" alt="logo" />
-      </div>
-      <div className="Navigation">
-        <a>Serviços</a>
-        <a>Portifólio</a>
-        <a>Empresa</a>
-        <a>Contato</a>
-        <a>Nossa Plataforma</a>
-      </div>
+    <Nav show={show}>
+      <BlueLogo className="Logo" />
+
+      <ul className="Navigation">
+        <li>
+          <Link className="Link" smooth={true} duration={1000} to="serviços">
+            Serviços
+          </Link>
+        </li>
+        <li>
+          <Link className="Link" smooth={true} duration={1000} to="portifólio">
+            Portifólio
+          </Link>
+        </li>
+        <li>
+          <Link className="Link" smooth={true} duration={1000} to="empresa">
+            Empresa
+          </Link>
+        </li>
+        <li>
+          <Link className="Link" smooth={true} duration={1000} to="contato">
+            Contato
+          </Link>
+        </li>
+        <li>
+          <a className="Link">Nossa Plataforma</a>
+        </li>
+      </ul>
       <div className="Navigation-Mobile">
-        <AiOutlineMenu className="MenuButton" />
+        {show ? (
+          <AiOutlineClose onClick={toggleMenu} className="MenuButton" />
+        ) : (
+          <AiOutlineMenu onClick={toggleMenu} className="MenuButton" />
+        )}
+        <ul>
+          <li>
+            <Link className="Link" smooth={true} duration={1000} to="serviços">
+              Serviços
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="Link"
+              smooth={true}
+              duration={1000}
+              to="portifólio"
+            >
+              Portifólio
+            </Link>
+          </li>
+          <li>
+            <Link to="empresa">Empresa</Link>
+          </li>
+          <li>
+            <Link to="contato">Contato</Link>
+          </li>
+          <li>
+            <a>Nossa Plataforma</a>
+          </li>
+        </ul>
       </div>
     </Nav>
   );

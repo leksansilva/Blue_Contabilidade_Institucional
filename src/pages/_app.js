@@ -2,6 +2,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
 import GlobalStyle from "../styles/globals";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,7 +10,7 @@ function MyApp({ Component, pageProps }) {
       <GlobalStyle/>
       <Header/>
       <Component {...pageProps} />
-      
+      <Footer/>
     </ThemeProvider>
   );
 }

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import media from "./media";
+ 
 export const Container = styled.div`
   overflow: hidden;
   position: relative;
@@ -9,20 +10,20 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.color};
+  background-color: ${({color}) => color};
 `;
 
 export const Image = styled.div`
   background-image: url("job.jpg");
   background-size: 100vw;
   display: block;
-  position: relative;
-  background-position: 50% auto;
+  background-repeat: no-repeat;
+  background-position: 50% ;
   top: 0px;
   height: 45vw;
   .details {
     display: flex;
-    background-color: rgba(23, 65, 149, 0.29);
+    background-color: rgba(0, 11, 40, 0.5);
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -41,14 +42,18 @@ export const Teste2 = styled.div`
   z-index: 1;
   height: 80px;
   width: 80px;
-  background-color: ${(props) => props.theme.color.secundary};
+  background-color: ${({theme}) => theme.color.secundary};
 `;
 
 export const Button = styled.button`
- position: relative;
+  position: relative;
   border: none;
   font-size: 1.2rem;
-  padding: 0.5rem 2rem;
+  padding: 0.7rem 2.5rem;
   color: #ffff;
-  background-color: ${(props) => props.theme.color.primary};
+  border-radius: 0.3em;
+  background-color: ${({theme}) => theme.color.primary};
+  :active {
+    background-color: ${({theme}) => theme.color.tertiary};
+  }
 `;

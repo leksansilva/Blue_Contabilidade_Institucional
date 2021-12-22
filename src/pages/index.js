@@ -1,23 +1,14 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import { useState } from "react";
-import {
-  Button,
-  Container,
-  Image,
-  Teste,
-  Teste2,
-  Teste3,
-} from "../styles/page.Styles";
-import BlueLogo from "../assets/Blue.svg";
+import { Button, Container, Image } from "../styles/page.Styles";
 
 export default function Home() {
   const [somador, setSomador] = useState(1);
   function utilizarBotao(ev, newValeu) {
-    let proximo =somador;
-    proximo= proximo + somador;
-    setSomador( proximo);
-    
+    let proximo = somador;
+    proximo = proximo + somador;
+    setSomador(proximo);
   }
 
   return (
@@ -25,16 +16,18 @@ export default function Home() {
       <Head>
         <title>Blue Contabilidade</title>
         <link rel="icon" href="/Blue.svg" />
+        <link rel="stylesheet" href="https://use.typekit.net/qlm6efy.css"/>
       </Head>
+
       <Image>
-        <div className="details" >
-          <Button onClick={utilizarBotao} >{somador}</Button>
-          </div> 
+        <div className="details">
+          <Button onClick={utilizarBotao}>{somador}</Button>
+        </div>
       </Image>
 
-      <Container color="green" />
-      <Container color="red" />
-      <Container color="yellow" />
+      <Container id="serviços" color="green" />
+      <Container id="portifólio" color="yellow" />
+      <Container id="empresa" color="red" />
     </>
   );
 }
