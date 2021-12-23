@@ -17,23 +17,23 @@ export default function Header() {
       <BlueLogo className="Logo" onClick={() => scroll.scrollToTop()} />
       <ul className="Navigation">
         <li>
-          <Link className="Link" smooth={true} duration={1000} to="empresa">
+          <Link offset={-90} className="Link"   smooth={true} duration={1000} to="empresa">
             Empresa
           </Link>
         </li>
         <li>
-          <Link className="Link" smooth={true} duration={1000} to="serviços">
+          <Link offset={-90} className="Link" smooth={true} duration={1000} to="serviços">
             Serviços
           </Link>
         </li>
         <li>
-          <Link className="Link" smooth={true} duration={1000} to="portifólio">
+          <Link offset={-90} className="Link" smooth={true} duration={1000} to="portifólio">
             Portifólio
           </Link>
         </li>
 
         <li>
-          <Link className="Link" smooth={true} duration={1000} to="contato">
+          <Link offset={-90} className="Link" smooth={true} duration={1000} to="contato">
             Contato
           </Link>
         </li>
@@ -49,10 +49,10 @@ export default function Header() {
         )}
         <ul>
           <li>
-            <Link to="empresa">Empresa</Link>
+            <Link offset={-90} to="empresa">Empresa</Link>
           </li>
           <li>
-            <Link className="Link" smooth={true} duration={1000} to="serviços">
+            <Link offset={-90} className="Link" smooth={true} duration={1000} to="serviços">
               Serviços
             </Link>
           </li>
@@ -68,7 +68,7 @@ export default function Header() {
           </li>
 
           <li>
-            <Link  className="Link"to="contato">Contato</Link>
+            <Link offset={-90}  className="Link"to="contato">Contato</Link>
           </li>
           <li>
             <a className="Link" >Nossa Plataforma</a>
