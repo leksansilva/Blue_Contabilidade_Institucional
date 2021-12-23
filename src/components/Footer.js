@@ -2,5 +2,5 @@ import { Container } from "../styles/page.Styles";
 
 export default function Footer(){
 
-  return(<Container  id="contato"color="pink"/>)
+  return(<Container height="50vh" id="contato"color="pink"/>)
 }

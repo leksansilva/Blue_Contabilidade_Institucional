@@ -5,20 +5,20 @@ export const Nav = styled.header`
   display: flex;
   width: 100%;
   top: 0;
-  height: 7rem;
+  height: 14vh;
   background-color: #ffff;
   position: sticky;
   z-index: 2;
   .Logo {
     display: block;
-    margin-bottom: 15px;
-    width: 8rem;
+    width: 6rem;
     height: 100%;
     margin-right: auto;
-    margin-left: 15px;
+    margin-left: 12px;
+    cursor: pointer;
   }
   .Navigation {
-    font-size: 1.1rem;
+    font-size: .9rem;
     display: flex;
     font-family: montserrat, sans-serif;
     font-weight: 400;
@@ -36,16 +36,16 @@ export const Nav = styled.header`
       background-color: #ffff;
       padding: 2.5rem;
       height: ${({show})=> show?'100vh':'auto'};
-    
-  
+      
       ul {
+      
         display: ${({show})=> show?'block':'none'};
        
       }
     }
     .MenuButton {
       color: ${({theme}) => theme.color.text.primary} ;
-      font-size: 1.5rem;
+      font-size: 3.5vh;
     }
   `}
   li,.Link {
@@ -57,4 +57,5 @@ export const Nav = styled.header`
     outline: none;
     cursor: pointer;
   }
+
 `;

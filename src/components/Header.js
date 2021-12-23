@@ -3,19 +3,24 @@ import { Nav } from "../styles/component.Styles";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import BlueLogo from "../assets/Blue.svg";
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll, Events } from "react-scroll";
 
 export default function Header() {
   const [show, setShow] = useState(false);
   const toggleMenu = () => {
     setShow(!show);
   };
+ 
 
   return (
     <Nav show={show}>
-      <BlueLogo className="Logo" />
-
+      <BlueLogo className="Logo" onClick={() => scroll.scrollToTop()} />
       <ul className="Navigation">
+        <li>
+          <Link className="Link" smooth={true} duration={1000} to="empresa">
+            Empresa
+          </Link>
+        </li>
         <li>
           <Link className="Link" smooth={true} duration={1000} to="serviços">
             Serviços
@@ -26,11 +31,7 @@ export default function Header() {
             Portifólio
           </Link>
         </li>
-        <li>
-          <Link className="Link" smooth={true} duration={1000} to="empresa">
-            Empresa
-          </Link>
-        </li>
+
         <li>
           <Link className="Link" smooth={true} duration={1000} to="contato">
             Contato
@@ -48,6 +49,9 @@ export default function Header() {
         )}
         <ul>
           <li>
+            <Link to="empresa">Empresa</Link>
+          </li>
+          <li>
             <Link className="Link" smooth={true} duration={1000} to="serviços">
               Serviços
             </Link>
@@ -62,14 +66,12 @@ export default function Header() {
               Portifólio
             </Link>
           </li>
+
           <li>
-            <Link to="empresa">Empresa</Link>
+            <Link  className="Link"to="contato">Contato</Link>
           </li>
           <li>
-            <Link to="contato">Contato</Link>
-          </li>
-          <li>
-            <a>Nossa Plataforma</a>
+            <a className="Link" >Nossa Plataforma</a>
           </li>
         </ul>
       </div>

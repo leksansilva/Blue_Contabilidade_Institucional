@@ -1,11 +1,12 @@
 const theme = {
   color: {
-    background: "#F3F3F3",
+    contrast: "#F3F3F3",
     primary: "#174195",
-    secundary: "#648DDF",
+    secondary: "#648DDF",
     tertiary:"#113273",
     text:{
-      primary:"#0C2350"
+      primary:"#0C2350",
+      secondary: "#F3F3F3"
     }
   },
 };
