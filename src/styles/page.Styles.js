@@ -10,11 +10,23 @@ export const Container = styled.div`
   flex-direction: ${({ direction }) => (direction ? direction : "column")};
   justify-content: center;
   align-items: center;
-  background-color: ${({ color }) => color};
+  background-color: ${({ color, theme }) =>
+    color === "primary"
+      ? theme.color.primary
+      : color === "secondary"
+      ? theme.color.secondary
+      : color === "tertiary"
+      ? theme.color.secondary
+      : color === "tertiary"
+      ? theme.color.tertiary
+      : color === "contrast"
+      ? theme.color.contrast
+      : theme.color.primary};
+  padding: ${({ padding }) => padding};
 `;
 
 export const Image = styled.div`
-  background-image: url("job.jpg");
+  background-image: url(${({ source }) => source});
   background-size: 100vw;
   display: block;
   background-repeat: no-repeat;
@@ -35,11 +47,22 @@ export const Grid = styled.div`
   width: 100%;
   height: 100%;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 33.33%;
+  grid-auto-rows: ${({ rows }) =>
+    rows === 1
+      ? "100%"
+      : rows === 2
+      ? "50%"
+      : rows === 3
+      ? "33.33%"
+      : rows === 4
+      ? "25%"
+      : "100%"};
   background-color: ${({ color, theme }) =>
     color ? color : theme.color.primary};
 `;
 export const Card = styled.div`
+  width: ${({ width }) => (width ? width : "auto")};
+  height: ${({ height }) => (height ? height : "auto")};
   background-color: ${({ color, theme }) =>
     color === "primary"
       ? theme.color.primary
@@ -54,22 +77,25 @@ export const Card = styled.div`
       : theme.color.primary};
   display: flex;
   flex-direction: ${({ direction }) => (direction ? direction : "column")};
-  justify-content: center;
-  align-items: center;
+  justify-content: ${({ content }) => (content ? content : "center")};
+  align-items: ${({ alignItems }) => (alignItems ? alignItems : "center")};
   overflow: hidden;
   padding: 15px;
+  margin: ${({ margin }) => margin};
 `;
 
 export const Title = styled.h1`
   font-family: montserrat, sans-serif;
   font-weight: 600;
   font-style: normal;
+
+  font-size: ${({ fontSize }) => (fontSize ? fontSize : "xx-large")};
   color: ${({ color, theme }) =>
     color === "secondary"
       ? theme.color.text.secondary
       : theme.color.text.primary};
-  border-top-style: solid;
-  border-bottom-style: solid;
+  border-style: ${({ border }) => (border ? border : "solid none solid none")};
+
   padding: 15px;
 `;
 
@@ -77,12 +103,11 @@ export const Text = styled.p`
   font-family: montserrat, sans-serif;
   font-weight: 400;
   font-style: normal;
-  text-align: center;
+  text-align: ${({ align }) => (align ? align : "center")};
   color: ${({ color, theme }) =>
     color === "secondary"
       ? theme.color.text.secondary
       : theme.color.text.primary};
-  text-transform: uppercase;
 `;
 
 export const Button = styled.button`

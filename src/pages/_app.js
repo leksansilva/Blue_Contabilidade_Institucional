@@ -13,14 +13,14 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    router.events.on("routeChangeError", () => setLoading(false));
-    router.events.on("routeChangeStart", () => setLoading(false));
-    router.events.on("routeChangeComplete", () => setLoading(true));
+    router.events.on("routeChangeError", () => setLoading(true));
+    router.events.on("routeChangeStart", () => setLoading(true));
+    router.events.on("routeChangeComplete", () => setLoading(false));
 
     return () => {
-      router.events.off("routeChangeError", () => setLoading(false));
-      router.events.off("routeChangeStart", () => setLoading(false));
-      router.events.off("routeChangeComplete", () => setLoading(true));
+      router.events.off("routeChangeError", () => setLoading(true));
+      router.events.off("routeChangeStart", () => setLoading(true));
+      router.events.off("routeChangeComplete", () => setLoading(false));
     };
   }, [router.events]);
   return (

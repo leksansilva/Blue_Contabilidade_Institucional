@@ -10,35 +10,57 @@ export default function Header() {
   const toggleMenu = () => {
     setShow(!show);
   };
- 
 
   return (
     <Nav show={show}>
       <BlueLogo className="Logo" onClick={() => scroll.scrollToTop()} />
       <ul className="Navigation">
         <li>
-          <Link offset={-90} className="Link"   smooth={true} duration={1000} to="empresa">
-            Empresa
-          </Link>
-        </li>
-        <li>
-          <Link offset={-90} className="Link" smooth={true} duration={1000} to="serviços">
+          <Link
+            offset={-90}
+            className="Link"
+            smooth={true}
+            duration={1000}
+            to="serviços"
+          >
             Serviços
           </Link>
         </li>
         <li>
-          <Link offset={-90} className="Link" smooth={true} duration={1000} to="portifólio">
+          <Link
+            offset={-90}
+            className="Link"
+            smooth={true}
+            duration={1000}
+            to="portifólio"
+          >
             Portifólio
           </Link>
         </li>
-
         <li>
-          <Link offset={-90} className="Link" smooth={true} duration={1000} to="contato">
+          <Link
+            offset={-90}
+            className="Link"
+            smooth={true}
+            duration={1000}
+            to="empresa"
+          >
+            Empresa
+          </Link>
+        </li>
+        <li>
+          <Link
+            offset={-90}
+            className="Link"
+            smooth={true}
+            duration={1000}
+            to="contato"
+          >
             Contato
           </Link>
         </li>
         <li>
-          <a className="Link">Nossa Plataforma</a>
+          <a className="Link" onClick={()=> alert("Em breve!")} >Nossa Plataforma</a>
         </li>
       </ul>
       <div className="Navigation-Mobile">
@@ -48,11 +70,15 @@ export default function Header() {
           <AiOutlineMenu onClick={toggleMenu} className="MenuButton" />
         )}
         <ul>
+          
           <li>
-            <Link offset={-90} to="empresa">Empresa</Link>
-          </li>
-          <li>
-            <Link offset={-90} className="Link" smooth={true} duration={1000} to="serviços">
+            <Link
+              offset={-90}
+              className="Link"
+              smooth={true}
+              duration={1000}
+              to="serviços"
+            >
               Serviços
             </Link>
           </li>
@@ -66,12 +92,24 @@ export default function Header() {
               Portifólio
             </Link>
           </li>
-
           <li>
-            <Link offset={-90}  className="Link"to="contato">Contato</Link>
+            <Link
+              offset={-90}
+              className="Link"
+              smooth={true}
+              duration={1000}
+              to="empresa"
+            >
+              Empresa
+            </Link>
           </li>
           <li>
-            <a className="Link" >Nossa Plataforma</a>
+            <Link offset={-90} className="Link" to="contato">
+              Contato
+            </Link>
+          </li>
+          <li>
+            <a className="Link" onClick={()=> alert("Em breve!")}>Nossa Plataforma</a>
           </li>
         </ul>
       </div>
