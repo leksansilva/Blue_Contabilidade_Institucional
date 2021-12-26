@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Head>
         <title>Blue Contabilidade</title>
-        <link rel="icon" href="/Blue.svg" />
+        <link rel="icon" href="/Blue.svg"  sizes="128x128"/>
         <link rel="stylesheet" href="https://use.typekit.net/qlm6efy.css" />
       </Head>
 

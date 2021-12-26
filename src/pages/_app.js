@@ -4,25 +4,18 @@ import GlobalStyle from "../styles/globals";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import LoadingScreen from "../components/LoadingScreen";
-import "nprogress/nprogress.css";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    router.events.on("routeChangeError", () => setLoading(true));
-    router.events.on("routeChangeStart", () => setLoading(true));
-    router.events.on("routeChangeComplete", () => setLoading(false));
-
+   
+    setLoading(false);
     return () => {
-      router.events.off("routeChangeError", () => setLoading(true));
-      router.events.off("routeChangeStart", () => setLoading(true));
-      router.events.off("routeChangeComplete", () => setLoading(false));
+      setLoading(true);
     };
-  }, [router.events]);
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
