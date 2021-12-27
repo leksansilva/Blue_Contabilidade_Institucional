@@ -88,7 +88,6 @@ export const Title = styled.h1`
   font-family: montserrat, sans-serif;
   font-weight: 600;
   font-style: normal;
-
   font-size: ${({ fontSize }) => (fontSize ? fontSize : "xx-large")};
   color: ${({ color, theme }) =>
     color === "secondary"

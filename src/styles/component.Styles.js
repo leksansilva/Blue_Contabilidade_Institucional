@@ -18,7 +18,7 @@ export const Nav = styled.header`
     cursor: pointer;
   }
   .Navigation {
-    font-size: .9rem;
+    font-size: 0.9rem;
     display: flex;
     font-family: montserrat, sans-serif;
     font-weight: 400;
@@ -35,32 +35,60 @@ export const Nav = styled.header`
       display: block;
       background-color: #ffff;
       padding: 2.5rem;
-      height: ${({show})=> show?'100vh':'auto'};
+      height: ${({ show }) => (show ? "100vh" : "auto")};
       
       ul {
       
-        display: ${({show})=> show?'block':'none'};
+        display: ${({ show }) => (show ? "block" : "none")};
        
       }
     }
     .MenuButton {
-      color: ${({theme}) => theme.color.text.primary} ;
+      color: ${({ theme }) => theme.color.text.primary} ;
       font-size: 3.5vh;
     }
   `}
   li,.Link {
     display: block;
-    color: ${({theme}) => theme.color.text.primary};
+    color: ${({ theme }) => theme.color.text.primary};
     margin: 1rem;
     text-align: center;
     text-decoration: none;
     outline: none;
     cursor: pointer;
   }
+`;
 
+export const Foot = styled.footer`
+  bottom: 0;
+  display:  flex;
+  flex-direction: column;
+  background-color: ${({ theme }) => theme.color.contrast};
+  height: 50vh;
+  min-height: 50vh;
+  .grid{
+    height: 90%;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .copyright{
+    height: 10%;
+    text-align: center;
+    color: ${({ theme }) => theme.color.text.primary};
+    opacity: 0.9;
+    font-size: .8rem;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 `;
 
 export const Screen = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -83,16 +111,13 @@ export const Screen = styled.div`
 
 export const Balls = styled.div`
   display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
-
+  margin-left: 90px;
   .ball {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: ${({theme})=>theme.color.primary};
+    background-color: ${({ theme }) => theme.color.primary};
     margin: 0 6px 0 0;
     animation: oscillate 0.7s ease-in forwards infinite;
   }

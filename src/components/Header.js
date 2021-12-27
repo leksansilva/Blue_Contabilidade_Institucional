@@ -60,7 +60,9 @@ export default function Header() {
           </Link>
         </li>
         <li>
-          <a className="Link" onClick={()=> alert("Em breve!")} >Nossa Plataforma</a>
+          <a className="Link" onClick={() => alert("Em breve!")}>
+            Nossa Plataforma
+          </a>
         </li>
       </ul>
       <div className="Navigation-Mobile">
@@ -70,7 +72,6 @@ export default function Header() {
           <AiOutlineMenu onClick={toggleMenu} className="MenuButton" />
         )}
         <ul>
-          
           <li>
             <Link
               offset={-90}
@@ -86,6 +87,7 @@ export default function Header() {
             <Link
               className="Link"
               smooth={true}
+              offset={-90}
               duration={1000}
               to="portifólio"
             >
@@ -104,12 +106,20 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link offset={-90} className="Link" to="contato">
+            <Link
+              offset={-90}
+              smooth={true}
+              duration={1000}
+              className="Link"
+              to="contato"
+            >
               Contato
             </Link>
           </li>
           <li>
-            <a className="Link" onClick={()=> alert("Em breve!")}>Nossa Plataforma</a>
+            <a className="Link" onClick={() => alert("Em breve!")}>
+              Nossa Plataforma
+            </a>
           </li>
         </ul>
       </div>

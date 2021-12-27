@@ -16,7 +16,8 @@ export default function Home() {
     <>
       <Head>
         <title>Blue Contabilidade</title>
-        <link rel="icon" href="/Blue.svg"  sizes="128x128"/>
+        <link rel="icon" href="/BlueIcon.svg"  sizes="128x128"/>
+        <meta name="description" content="Contabilidade Digital"/>
         <link rel="stylesheet" href="https://use.typekit.net/qlm6efy.css" />
       </Head>
 
@@ -27,7 +28,7 @@ export default function Home() {
           </Link>
         </div>
       </Image>
-      <Container height="250vh" id="serviços" color="primary">
+      <Container height="auto" id="serviços" color="primary">
         <Title color="secondary" border="none none solid none">
           Serviços
         </Title>
