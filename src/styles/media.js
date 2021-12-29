@@ -4,7 +4,7 @@ const screenSizes = {
   large: 1170,
   desktop: 992,
   tablet: 768,
-  mobile: 376,
+  mobile: 414,
 };
 
 const media = Object.keys(screenSizes).reduce((acc, label) => {

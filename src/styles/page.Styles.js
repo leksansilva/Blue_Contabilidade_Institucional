@@ -94,19 +94,39 @@ export const Title = styled.h1`
       ? theme.color.text.secondary
       : theme.color.text.primary};
   border-style: ${({ border }) => (border ? border : "solid none solid none")};
-
+  ${media.tablet`
+  font-size: ${({ fontSizeMobile }) =>
+    fontSizeMobile ? fontSizeMobile : "25px"};
+  
+  `}
+  ${media.mobile`
+  font-size: ${({ fontSizeMobile }) =>
+    fontSizeMobile ? fontSizeMobile : "15px"};
+  
+  `}
   padding: 15px;
 `;
 
 export const Text = styled.p`
   font-family: montserrat, sans-serif;
   font-weight: 400;
+  font-size: 0.9rem;
   font-style: normal;
   text-align: ${({ align }) => (align ? align : "center")};
   color: ${({ color, theme }) =>
     color === "secondary"
       ? theme.color.text.secondary
       : theme.color.text.primary};
+  ${media.tablet`
+  font-size: ${({ fontSizeMobile }) =>
+    fontSizeMobile ? fontSizeMobile : "20px"};
+  
+  `}
+  ${media.mobile`
+  font-size: ${({ fontSizeMobile }) =>
+    fontSizeMobile ? fontSizeMobile : "12px"};
+  
+  `}
 `;
 
 export const Button = styled.button`

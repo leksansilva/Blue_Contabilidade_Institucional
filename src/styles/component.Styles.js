@@ -5,7 +5,7 @@ export const Nav = styled.header`
   display: flex;
   width: 100%;
   top: 0;
-  height: 14vh;
+  height: 7em;
   background-color: #ffff;
   position: sticky;
   z-index: 2;

@@ -16,8 +16,8 @@ export default function Home() {
     <>
       <Head>
         <title>Blue Contabilidade</title>
-        <link rel="icon" href="/BlueIcon.svg"  sizes="128x128"/>
-        <meta name="description" content="Contabilidade Digital"/>
+        <link rel="icon" href="/BlueIcon.svg" sizes="128x128" />
+        <meta name="description" content="Contabilidade Digital" />
         <link rel="stylesheet" href="https://use.typekit.net/qlm6efy.css" />
       </Head>
 
@@ -29,17 +29,17 @@ export default function Home() {
         </div>
       </Image>
       <Container height="auto" id="serviços" color="primary">
-        <Title color="secondary" border="none none solid none">
+        <Title fontSizeMobile="20px" color="secondary" border="none none solid none">
           Serviços
         </Title>
         <Grid rows={3}>
           <Card content="baseline" alignItems="end">
             <Title
-              fontSize="x-large"
+              fontSize="1.2rem"
               color="secondary"
               border="none none solid none"
             >
-              Serviço 1
+              Contabilidade digital para simples nacional
             </Title>
             <Text color="secondary" align="right">
               Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
@@ -51,7 +51,7 @@ export default function Home() {
             </Text>
           </Card>
           <Card>
-            <Title fontSize="x-large" color="secondary" border="solid">
+            <Title fontSize="1.2rem" color="secondary" border="solid">
               imagem 1
             </Title>
           </Card>
@@ -62,11 +62,11 @@ export default function Home() {
           </Card>
           <Card content="baseline" alignItems="baseline">
             <Title
-              fontSize="x-large"
+             fontSize="1.2rem"
               color="secondary"
               border="none none solid none"
             >
-              Serviço 2
+              Contabilidade digital para lucro presumido
             </Title>
             <Text color="secondary" align="left">
               Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
@@ -79,7 +79,7 @@ export default function Home() {
           </Card>
           <Card content="baseline" alignItems="end">
             <Title
-              fontSize="x-large"
+              fontSize="1.2rem"
               color="secondary"
               border="none none solid none"
             >
@@ -102,22 +102,15 @@ export default function Home() {
         </Grid>
       </Container>
       <Container id="portifólio" color="contrast" padding="15px">
-        <Title border="none none solid none">Nossos Clientes</Title>
+        <Title  fontSizeMobile="20px" border="none none solid none">Nossos Clientes</Title>
         <Card width="100%" height="100%" color="tertiary"></Card>
       </Container>
       <Container id="empresa" height="200vh" padding="15px">
         <Card margin="15px" width="100%">
-          <Title border="none none solid none" color="secondary">
+          <Title fontSizeMobile="20px" border="none none solid none" color="secondary">
             Quem somos?
           </Title>
-          <Text color="secondary">
-            Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
-            dictum ipsum nec lectus varius vehicula. Pellentesque lobortis, Sed
-            urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin dictum
-            ipsum nec lectus varius vehicula. Pellentesque lobortis, Sed urna
-            ipsum, egestas id laoreet non, hendrerit at nisl. Proin dictum ipsum
-            nec lectus varius vehicula. Pellentesque lobortis,
-          </Text>
+          <Text color="secondary">em Construção</Text>
         </Card>
 
         <Grid rows={3}>
@@ -126,14 +119,19 @@ export default function Home() {
           </Card>
           <Card color="contrast">
             <Text>
-              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
-              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
+              Trazer as melhores soluções que alie tecnologias existentes com
+              inovações próprias afim de garantir uma melhora no controle
+              patrimonial e redução da carga tributária, aproximar o cliente da
+              contabilidade através de nossa plataforma interativa e
+              automatizada.
             </Text>
           </Card>
           <Card color="contrast">
             <Text>
-              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
-              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
+              Consolidar-se como a empresa que preza pela satisfação referente
+              as entregas dos serviços contratados. Ser referência local em
+              inovação e tecnologia. Excelência nos serviços que formos
+              contratados.
             </Text>
           </Card>
           <Card>
@@ -144,8 +142,8 @@ export default function Home() {
           </Card>
           <Card color="contrast">
             <Text>
-              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
-              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
+              Oferecer serviço personalizados sob medida da demanda do cliente,
+              preço justo e transparência.
             </Text>
           </Card>
         </Grid>

@@ -3,7 +3,7 @@ import { Nav } from "../styles/component.Styles";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import BlueLogo from "../assets/Blue.svg";
 import { useState } from "react";
-import { Link, animateScroll as scroll, Events } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Header() {
   const [show, setShow] = useState(false);
