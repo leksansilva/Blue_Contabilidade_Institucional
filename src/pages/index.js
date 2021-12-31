@@ -28,12 +28,16 @@ export default function Home() {
           </Link>
         </div>
       </Image>
-      <Container height="auto" id="serviços" color="primary">
-        <Title fontSizeMobile="20px" color="secondary" border="none none solid none">
+      <Container height="auto" id="services" color="primary">
+        <Title
+          fontSizeMobile="20px"
+          color="secondary"
+          border="none none solid none"
+        >
           Serviços
         </Title>
-        <Grid rows={3}>
-          <Card content="baseline" alignItems="end">
+        <Grid rows={4}>
+          <Card padding="15px" content="baseline" alignItems="end">
             <Title
               fontSize="1.2rem"
               color="secondary"
@@ -50,19 +54,15 @@ export default function Home() {
               dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
             </Text>
           </Card>
-          <Card>
-            <Title fontSize="1.2rem" color="secondary" border="solid">
-              imagem 1
-            </Title>
+          <Card padding="0 15px 0 0">
+            <Image opacity={0.8} height="100%" imageSize="55vw" source="/digital1.jpg" />
           </Card>
-          <Card content="center" alignItems="center">
-            <Title fontSize="x-large" color="secondary" border="solid">
-              Imagem 2
-            </Title>
+          <Card padding="0 0 0 15px" content="center" alignItems="center">
+            <Image opacity={0.8} height="100%" imageSize="55vw" source="/digital3.jpg" />
           </Card>
-          <Card content="baseline" alignItems="baseline">
+          <Card padding="15px" content="baseline" alignItems="baseline">
             <Title
-             fontSize="1.2rem"
+              fontSize="1.2rem"
               color="secondary"
               border="none none solid none"
             >
@@ -77,13 +77,13 @@ export default function Home() {
               dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
             </Text>
           </Card>
-          <Card content="baseline" alignItems="end">
+          <Card padding="15px" content="baseline" alignItems="end">
             <Title
               fontSize="1.2rem"
               color="secondary"
               border="none none solid none"
             >
-              Serviço 3
+              Contabilidade com assessoria para lucro real.
             </Title>
             <Text color="secondary" align="right">
               Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
@@ -94,30 +94,55 @@ export default function Home() {
               dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
             </Text>
           </Card>
-          <Card content="center" alignItems="center">
-            <Title fontSize="x-large" color="secondary" border="solid">
-              Imagem 3
+          <Card padding="0 15px 0 0" content="center" alignItems="center">
+            <Image opacity={0.8}  height="100%" imageSize="55vw" source="/digital4.jpg" />
+          </Card>
+
+          <Card padding="0 0 0 15px" content="center" alignItems="center">
+            <Image opacity={0.8} height="100%" imageSize="55vw" source="/digital2.jpg" />
+          </Card>
+          <Card padding="15px" content="baseline" alignItems="baseline">
+            <Title
+              fontSize="1.2rem"
+              color="secondary"
+              border="none none solid none"
+            >
+              Todo tipo de serviço da área contábil, jurídica e tecnológica.
             </Title>
+            <Text color="secondary" align="left">
+              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
+              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
+              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
+              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
+              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
+              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
+            </Text>
           </Card>
         </Grid>
       </Container>
-      <Container id="portifólio" color="contrast" padding="15px">
-        <Title  fontSizeMobile="20px" border="none none solid none">Nossos Clientes</Title>
+      <Container id="portfolio" color="contrast" padding="15px">
+        <Title fontSizeMobile="20px" border="none none solid none">
+          Nossos Clientes
+        </Title>
         <Card width="100%" height="100%" color="tertiary"></Card>
       </Container>
-      <Container id="empresa" height="200vh" padding="15px">
-        <Card margin="15px" width="100%">
-          <Title fontSizeMobile="20px" border="none none solid none" color="secondary">
+      <Container id="company" height="200vh" padding="15px">
+        <Card padding="15px" margin="15px" width="100%">
+          <Title
+            fontSizeMobile="20px"
+            border="none none solid none"
+            color="secondary"
+          >
             Quem somos?
           </Title>
           <Text color="secondary">em Construção</Text>
         </Card>
 
         <Grid rows={3}>
-          <Card>
+          <Card >
             <Title color="secondary">MISSÃO</Title>
           </Card>
-          <Card color="contrast">
+          <Card padding="15px" color="contrast">
             <Text>
               Trazer as melhores soluções que alie tecnologias existentes com
               inovações próprias afim de garantir uma melhora no controle
@@ -126,7 +151,7 @@ export default function Home() {
               automatizada.
             </Text>
           </Card>
-          <Card color="contrast">
+          <Card padding="15px" color="contrast">
             <Text>
               Consolidar-se como a empresa que preza pela satisfação referente
               as entregas dos serviços contratados. Ser referência local em
@@ -140,7 +165,7 @@ export default function Home() {
           <Card>
             <Title color="secondary">VALORES</Title>
           </Card>
-          <Card color="contrast">
+          <Card padding="15px" color="contrast">
             <Text>
               Oferecer serviço personalizados sob medida da demanda do cliente,
               preço justo e transparência.

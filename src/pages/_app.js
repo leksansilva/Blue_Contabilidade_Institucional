@@ -8,9 +8,9 @@ import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
-
+ 
   useEffect(() => {
-   
+ 
     setLoading(false);
     return () => {
       setLoading(true);

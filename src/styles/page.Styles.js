@@ -27,12 +27,15 @@ export const Container = styled.div`
 
 export const Image = styled.div`
   background-image: url(${({ source }) => source});
-  background-size: 100vw;
+  background-size: ${({imageSize})=>imageSize?imageSize:"100vw"};
   display: block;
+  width: ${({width})=>width?width:"100%"};
+  opacity: ${({opacity})=>opacity?opacity:1};
   background-repeat: no-repeat;
-  background-position: 50%;
-  top: 0px;
-  height: 45vw;
+  background-position:${({position})=>position?position:"50%"};
+  top: 0;
+  border-radius: ${({borderRadius})=>borderRadius?borderRadius:"none"};
+  height: ${({height})=>height?height:"45vw"};
   .details {
     display: flex;
     background-color: rgba(0, 11, 40, 0.5);
@@ -55,7 +58,7 @@ export const Grid = styled.div`
       : rows === 3
       ? "33.33%"
       : rows === 4
-      ? "25%"
+      ? "24%"
       : "100%"};
   background-color: ${({ color, theme }) =>
     color ? color : theme.color.primary};
@@ -80,7 +83,7 @@ export const Card = styled.div`
   justify-content: ${({ content }) => (content ? content : "center")};
   align-items: ${({ alignItems }) => (alignItems ? alignItems : "center")};
   overflow: hidden;
-  padding: 15px;
+  padding: ${({padding})=>padding?padding:"0"};
   margin: ${({ margin }) => margin};
 `;
 

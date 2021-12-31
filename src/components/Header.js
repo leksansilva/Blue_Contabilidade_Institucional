@@ -21,7 +21,7 @@ export default function Header() {
             className="Link"
             smooth={true}
             duration={1000}
-            to="serviços"
+            to="services"
           >
             Serviços
           </Link>
@@ -32,7 +32,7 @@ export default function Header() {
             className="Link"
             smooth={true}
             duration={1000}
-            to="portifólio"
+            to="portfolio"
           >
             Portifólio
           </Link>
@@ -43,7 +43,7 @@ export default function Header() {
             className="Link"
             smooth={true}
             duration={1000}
-            to="empresa"
+            to="company"
           >
             Empresa
           </Link>
@@ -54,7 +54,7 @@ export default function Header() {
             className="Link"
             smooth={true}
             duration={1000}
-            to="contato"
+            to="contact"
           >
             Contato
           </Link>
@@ -78,7 +78,7 @@ export default function Header() {
               className="Link"
               smooth={true}
               duration={1000}
-              to="serviços"
+              to="services"
             >
               Serviços
             </Link>
@@ -89,7 +89,7 @@ export default function Header() {
               smooth={true}
               offset={-90}
               duration={1000}
-              to="portifólio"
+              to="portfolio"
             >
               Portifólio
             </Link>
@@ -100,7 +100,7 @@ export default function Header() {
               className="Link"
               smooth={true}
               duration={1000}
-              to="empresa"
+              to="company"
             >
               Empresa
             </Link>
@@ -111,7 +111,7 @@ export default function Header() {
               smooth={true}
               duration={1000}
               className="Link"
-              to="contato"
+              to="contact"
             >
               Contato
             </Link>

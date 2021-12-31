@@ -61,23 +61,94 @@ export const Nav = styled.header`
 
 export const Foot = styled.footer`
   bottom: 0;
-  display:  flex;
+  padding: 15px;
+  display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.color.contrast};
   height: 50vh;
   min-height: 50vh;
-  .grid{
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     height: 90%;
+    width: 100%;
     font-family: montserrat, sans-serif;
     font-weight: 400;
     font-style: normal;
+    .image {
+      height: 50%;
+      width: 40%;
+      text-align: center;
+      font-size: 0.8rem;
+      font-family: montserrat, sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      color: ${({theme})=>theme.color.text.primary};
+      ${media.tablet`
+        height: 50%;
+        width: 50%;
+        font-size: 0.6rem;
+      `}
+      ${media.mobile`
+        height: 20%;
+        width: 80%;
+        font-size: 0.6rem;
+      `}
+    }
+    .contact {
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      color: ${({theme})=>theme.color.text.primary};
+      .item1{
+        font-family: montserrat, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        flex-grow: 0.2;
+        ${media.tablet`
+        flex-grow: 0.1;
+        `}
+
+      }
+      .item {
+        display: flex;
+        font-family: montserrat, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        flex-grow: 0.1;
+        ${media.tablet`
+        flex-grow: 0.05;
+        `}
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+        .icon{
+          height: 0.8rem;
+          width: auto;
+        }
+        ${media.tablet`
+        font-size: 0.5rem;
+        .icon{
+          height: 0.5rem;
+          width: auto;
+        }
+      `}
+      ${media.mobile`
+        font-size: 0.5rem;
+        .icon{
+          height: 0.5rem;
+          width: auto;
+        }
+      `}
+      }
+    }
   }
-  .copyright{
+
+  .copyright {
     height: 10%;
     text-align: center;
     color: ${({ theme }) => theme.color.text.primary};
     opacity: 0.9;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-family: montserrat, sans-serif;
     font-weight: 400;
     font-style: normal;
