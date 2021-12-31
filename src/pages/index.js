@@ -16,11 +16,13 @@ export default function Home() {
     <>
       <Head>
         <title>Blue Contabilidade</title>
-        <link rel="icon" href="/BlueIcon.svg" sizes="128x128" />
+        <link rel="icon" href="/BlueIcon.svg" sizes="any" type="image/svg+xml" />
         <meta name="description" content="Contabilidade Digital" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="max-image-preview:large" />
         <link rel="stylesheet" href="https://use.typekit.net/qlm6efy.css" />
+        <meta property="og:locale" content="pt_BR"/>
+        <meta name="msapplication-TileImage" content="/Blue.svg"/>
       </Head>
 
       <Image height="100vh" source={"job.jpg"}>
