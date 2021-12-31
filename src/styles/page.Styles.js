@@ -27,7 +27,7 @@ export const Container = styled.div`
 
 export const Image = styled.div`
   background-image: url(${({ source }) => source});
-  background-size: ${({imageSize})=>imageSize?imageSize:"100vw"};
+  background-size: ${({imageSize})=>imageSize?imageSize:"100% 100%"};
   display: block;
   width: ${({width})=>width?width:"100%"};
   opacity: ${({opacity})=>opacity?opacity:1};
