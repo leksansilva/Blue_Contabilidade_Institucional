@@ -8,27 +8,28 @@ import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
- 
+
   useEffect(() => {
- 
     setLoading(false);
     return () => {
       setLoading(true);
     };
   }, []);
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <GlobalStyle />
-      {loading ? (
-        <LoadingScreen />
-      ) : (
-        <>
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
-        </>
-      )}
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        {loading ? (
+          <LoadingScreen />
+        ) : (
+          <>
+            <Header />
+            <Component {...pageProps} />
+            <Footer />
+          </>
+        )}
+      </ThemeProvider>
+    </>
   );
 }
 

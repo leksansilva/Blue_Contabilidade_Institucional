@@ -10,7 +10,7 @@ import {
   Text,
   Title,
 } from "../styles/page.Styles";
-
+import BlueLogo from "../assets/BlueBackground.svg";
 export default function Home() {
   return (
     <>
@@ -18,12 +18,15 @@ export default function Home() {
         <title>Blue Contabilidade</title>
         <link rel="icon" href="/BlueIcon.svg" sizes="128x128" />
         <meta name="description" content="Contabilidade Digital" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="max-image-preview:large" />
         <link rel="stylesheet" href="https://use.typekit.net/qlm6efy.css" />
       </Head>
 
-      <Image source={"job.jpg"}>
+      <Image height="100vh" source={"job.jpg"}>
         <div className="details">
-          <Link to="empresa" offset={-90} smooth={true} duration={1000}>
+          <BlueLogo />
+          <Link to="company" offset={-90} smooth={true} duration={1000}>
             <Button>Conheça um pouco sobre nós!</Button>
           </Link>
         </div>
@@ -55,10 +58,20 @@ export default function Home() {
             </Text>
           </Card>
           <Card padding="0 15px 0 0">
-            <Image opacity={0.8} height="100%" imageSize="55vw" source="/digital1.jpg" />
+            <Image
+              opacity={0.8}
+              height="100%"
+              imageSize="55vw"
+              source="/digital1.jpg"
+            />
           </Card>
           <Card padding="0 0 0 15px" content="center" alignItems="center">
-            <Image opacity={0.8} height="100%" imageSize="55vw" source="/digital3.jpg" />
+            <Image
+              opacity={0.8}
+              height="100%"
+              imageSize="55vw"
+              source="/digital3.jpg"
+            />
           </Card>
           <Card padding="15px" content="baseline" alignItems="baseline">
             <Title
@@ -95,11 +108,21 @@ export default function Home() {
             </Text>
           </Card>
           <Card padding="0 15px 0 0" content="center" alignItems="center">
-            <Image opacity={0.8}  height="100%" imageSize="55vw" source="/digital4.jpg" />
+            <Image
+              opacity={0.8}
+              height="100%"
+              imageSize="55vw"
+              source="/digital4.jpg"
+            />
           </Card>
 
           <Card padding="0 0 0 15px" content="center" alignItems="center">
-            <Image opacity={0.8} height="100%" imageSize="55vw" source="/digital2.jpg" />
+            <Image
+              opacity={0.8}
+              height="100%"
+              imageSize="55vw"
+              source="/digital2.jpg"
+            />
           </Card>
           <Card padding="15px" content="baseline" alignItems="baseline">
             <Title
@@ -139,7 +162,7 @@ export default function Home() {
         </Card>
 
         <Grid rows={3}>
-          <Card >
+          <Card>
             <Title color="secondary">MISSÃO</Title>
           </Card>
           <Card padding="15px" color="contrast">

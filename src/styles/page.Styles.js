@@ -38,6 +38,7 @@ export const Image = styled.div`
   height: ${({height})=>height?height:"45vw"};
   .details {
     display: flex;
+    flex-direction: column;
     background-color: rgba(0, 11, 40, 0.5);
     height: 100%;
     justify-content: center;
