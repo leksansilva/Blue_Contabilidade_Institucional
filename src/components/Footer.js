@@ -23,10 +23,10 @@ export default function Footer() {
           <div className="item1">Contato</div>
           <div className="item">
             {" "}
-            <BsTelephoneFill className="icon" /> (75) 9 9229-3373
+            <BsTelephoneFill className="icon" />&nbsp;(75) 9 9229-3373
           </div>
           <div className="item">
-            <MdOutlineEmail className="icon" /> mauricio@bluecontabilidade.com
+            <MdOutlineEmail className="icon" />&nbsp;mauricio@bluecontabilidade.com
           </div>
         </div>
       </div>

@@ -101,6 +101,7 @@ export const Foot = styled.footer`
       flex-direction: column;
       color: ${({theme})=>theme.color.text.primary};
       .item1{
+        font-size: 0.9rem;
         font-family: montserrat, sans-serif;
         font-weight: 500;
         font-style: normal;
