@@ -23,7 +23,6 @@ export default function Home() {
         <link rel="stylesheet" href="https://use.typekit.net/qlm6efy.css" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:image" content="/Blue.png" />
-        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="600" />
         <link rel="apple-touch-icon" href="/Blue.png" />
@@ -31,7 +30,7 @@ export default function Home() {
         <meta name="msapplication-TileImage" content="/Blue.png" />
       </Head>
 
-      <Image height="100vh" source={"job.jpg"}>
+      <Image imageContainer={true} height="100vh" source={"job.jpg"}>
         <div className="details">
           <BlueLogo />
           <Link to="company" offset={-90} smooth={true} duration={1000}>
@@ -39,14 +38,21 @@ export default function Home() {
           </Link>
         </div>
       </Image>
-      <Container height="auto" id="services" color="primary">
-        <Title
-          fontSizeMobile="20px"
-          color="secondary"
-          border="none none solid none"
-        >
-          Serviços
-        </Title>
+      <Container
+        mobileHeight="300vh"
+        height="250vh"
+        id="services"
+        color="primary"
+      >
+        <Card padding="15px" margin="15px" width="100%">
+          <Title
+            fontSizeMobile="20px"
+            color="secondary"
+            border="none none solid none"
+          >
+            Serviços
+          </Title>
+        </Card>
         <Grid rows={4}>
           <Card padding="15px" content="baseline" alignItems="end">
             <Title
@@ -54,19 +60,19 @@ export default function Home() {
               color="secondary"
               border="none none solid none"
             >
-              Contabilidade digital para simples nacional
+              Contabilidade Digital para empresas do Simples Nacional
             </Title>
             <Text color="secondary" align="right">
-              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
-              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
-              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
-              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
-              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
-              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
+              Planejamento tributário, Assessoria tributária, Pagamento de
+              impostos em dia, Emissão de nota fiscal, Apoio na entrega de
+              obrigações acessórias, Redução de custos, Simplificação de
+              processos, Facilidade no acesso aos dados, Segurança no
+              armazenamento dos dados
             </Text>
           </Card>
           <Card padding="0 15px 0 0">
             <Image
+              imageContainer={true}
               opacity={0.8}
               height="100%"
               imageSize="55vw"
@@ -75,6 +81,7 @@ export default function Home() {
           </Card>
           <Card padding="0 0 0 15px" content="center" alignItems="center">
             <Image
+              imageContainer={true}
               opacity={0.8}
               height="100%"
               imageSize="55vw"
@@ -87,7 +94,7 @@ export default function Home() {
               color="secondary"
               border="none none solid none"
             >
-              Contabilidade digital para lucro presumido
+              Contabilidade Digital para lucro presumido
             </Title>
             <Text color="secondary" align="left">
               Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
@@ -104,7 +111,7 @@ export default function Home() {
               color="secondary"
               border="none none solid none"
             >
-              Contabilidade com assessoria para lucro real.
+              Assessoria para lucro real.
             </Title>
             <Text color="secondary" align="right">
               Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
@@ -117,6 +124,7 @@ export default function Home() {
           </Card>
           <Card padding="0 15px 0 0" content="center" alignItems="center">
             <Image
+              imageContainer={true}
               opacity={0.8}
               height="100%"
               imageSize="55vw"
@@ -126,6 +134,7 @@ export default function Home() {
 
           <Card padding="0 0 0 15px" content="center" alignItems="center">
             <Image
+              imageContainer={true}
               opacity={0.8}
               height="100%"
               imageSize="55vw"
@@ -138,11 +147,9 @@ export default function Home() {
               color="secondary"
               border="none none solid none"
             >
-              Todo tipo de serviço da área contábil, jurídica e tecnológica.
+              Serviços da área contábil, jurídica e tecnológica
             </Title>
             <Text color="secondary" align="left">
-              Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
-              dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
               Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin
               dictum ipsum nec lectus varius vehicula. Pellentesque lobortis,
               Sed urna ipsum, egestas id laoreet non, hendrerit at nisl. Proin

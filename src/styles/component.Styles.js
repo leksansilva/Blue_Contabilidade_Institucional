@@ -69,38 +69,39 @@ export const Foot = styled.footer`
   min-height: 50vh;
   .grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr;
     height: 90%;
     width: 100%;
     font-family: montserrat, sans-serif;
     font-weight: 400;
     font-style: normal;
     .image {
-      height: 50%;
-      width: 40%;
+      height: 7rem;
+      width: 7rem;
       text-align: center;
       font-size: 0.8rem;
       font-family: montserrat, sans-serif;
       font-weight: 300;
       font-style: normal;
-      color: ${({theme})=>theme.color.text.primary};
+      color: ${({ theme }) => theme.color.text.primary};
+
       ${media.tablet`
-        height: 50%;
-        width: 50%;
-        font-size: 0.6rem;
+      height: 7rem;
+      width: 7rem; 
+        font-size: 0.8rem;
       `}
       ${media.mobile`
-        height: 20%;
-        width: 80%;
-        font-size: 0.6rem;
+        height: 4rem;
+        width: 4rem; 
+        font-size: 0.5rem;
       `}
     }
     .contact {
       font-size: 0.8rem;
       display: flex;
       flex-direction: column;
-      color: ${({theme})=>theme.color.text.primary};
-      .item1{
+      color: ${({ theme }) => theme.color.text.primary};
+      .item1 {
         font-size: 0.9rem;
         font-family: montserrat, sans-serif;
         font-weight: 500;
@@ -109,7 +110,6 @@ export const Foot = styled.footer`
         ${media.tablet`
         flex-grow: 0.1;
         `}
-
       }
       .item {
         display: flex;
@@ -122,9 +122,13 @@ export const Foot = styled.footer`
         `}
         font-size: 0.8rem;
         flex-wrap: wrap;
-        .icon{
+        .icon {
           height: 0.8rem;
           width: auto;
+        }
+        .linkContact {
+          text-decoration: none;
+          color: inherit;
         }
         ${media.tablet`
         font-size: 0.5rem;
@@ -133,7 +137,7 @@ export const Foot = styled.footer`
           width: auto;
         }
       `}
-      ${media.mobile`
+        ${media.mobile`
         font-size: 0.5rem;
         .icon{
           height: 0.5rem;

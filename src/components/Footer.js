@@ -13,7 +13,7 @@ export default function Footer() {
             position="50% 2%"
             borderRadius="100%"
             width="100%"
-            imageSize="20vw"
+            imageSize="250%"
             height="100%"
             source="dono.jpg"
           />
@@ -23,10 +23,21 @@ export default function Footer() {
           <div className="item1">Contato</div>
           <div className="item">
             {" "}
-            <BsTelephoneFill className="icon" />&nbsp;(75) 9 9229-3373
+            <BsTelephoneFill className="icon" />
+            &nbsp;{" "}
+            <a className="linkContact" href="tel:+55 (75) 9 9229-3373">
+              +55 (75) 9 9229-3373
+            </a>
           </div>
           <div className="item">
-            <MdOutlineEmail className="icon" />&nbsp;mauricio@bluecontabilidade.com
+            <MdOutlineEmail className="icon" />
+            &nbsp;
+            <a
+              className="linkContact"
+              href="mailto: mauricio@bluecontabilidade.com"
+            >
+              mauricio@bluecontabilidade.com
+            </a>
           </div>
         </div>
       </div>

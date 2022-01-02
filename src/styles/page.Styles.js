@@ -6,6 +6,25 @@ export const Container = styled.div`
   position: relative;
   height: ${({ height }) => (height ? height : "100vh")};
   min-height: ${({ height }) => (height ? height : "100vh")};
+  ${media.tablet`
+    height: ${({ height, mobileHeight }) =>
+      mobileHeight ? "450vh" : height ? height : "100vh"};
+    min-height: ${({ height, mobileHeight }) =>
+      mobileHeight ? "450vh" : height ? height : "100vh"};
+  `}
+  
+  ${media.mobile`
+    height: ${({ height, mobileHeight }) =>
+      mobileHeight ? mobileHeight : height ? height : "100vh"};
+    min-height: ${({ height, mobileHeight }) =>
+      mobileHeight ? mobileHeight : height ? height : "100vh"};
+  `}
+  ${media.mobileS`
+    height: ${({ height, mobileHeight }) =>
+      mobileHeight ? "400vh" : height ? height : "100vh"};
+    min-height: ${({ height, mobileHeight }) =>
+      mobileHeight ? "400vh" : height ? height : "100vh"};
+  `}
   display: flex;
   flex-direction: ${({ direction }) => (direction ? direction : "column")};
   justify-content: center;
@@ -27,15 +46,21 @@ export const Container = styled.div`
 
 export const Image = styled.div`
   background-image: url(${({ source }) => source});
-  background-size: ${({imageSize})=>imageSize?imageSize:"100% 100%"};
+  background-size: ${({ imageSize }) => (imageSize ? imageSize : "100% 100%")};
+  ${media.tablet`
+  
+  background-size: ${({ imageContainer, imageSize }) =>
+    imageContainer ? "250% 100%" : imageSize ? imageSize : "100% 100%"};
+  `}
   display: block;
-  width: ${({width})=>width?width:"100%"};
-  opacity: ${({opacity})=>opacity?opacity:1};
+  width: ${({ width }) => (width ? width : "100%")};
+  opacity: ${({ opacity }) => (opacity ? opacity : 1)};
   background-repeat: no-repeat;
-  background-position:${({position})=>position?position:"50%"};
+  background-position: ${({ position }) => (position ? position : "50%")};
   top: 0;
-  border-radius: ${({borderRadius})=>borderRadius?borderRadius:"none"};
-  height: ${({height})=>height?height:"45vw"};
+  border-radius: ${({ borderRadius }) =>
+    borderRadius ? borderRadius : "none"};
+  height: ${({ height }) => (height ? height : "45vw")};
   .details {
     display: flex;
     flex-direction: column;
@@ -84,7 +109,7 @@ export const Card = styled.div`
   justify-content: ${({ content }) => (content ? content : "center")};
   align-items: ${({ alignItems }) => (alignItems ? alignItems : "center")};
   overflow: hidden;
-  padding: ${({padding})=>padding?padding:"0"};
+  padding: ${({ padding }) => (padding ? padding : "0")};
   margin: ${({ margin }) => margin};
 `;
 
