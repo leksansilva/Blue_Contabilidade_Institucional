@@ -5,12 +5,16 @@ import {
   Button,
   Card,
   Container,
+  FloatButton,
   Grid,
   Image,
   Text,
   Title,
 } from "../styles/page.Styles";
 import BlueLogo from "../assets/BlueBackground.svg";
+
+import { ImWhatsapp } from "react-icons/im";
+
 export default function Home() {
   return (
     <>
@@ -29,6 +33,16 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#0562DC" />
         <meta name="msapplication-TileImage" content="/Blue.png" />
       </Head>
+      <FloatButton>
+      
+        <a
+          href="https://wa.me/5575992293373/?text=Eu%20tenho%20interesse%20no%20seu%20serviço%20de%20contabilidade"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <ImWhatsapp className="wpp" />
+        </a>
+      </FloatButton>
 
       <Image imageContainer={true} height="100vh" source={"job.jpg"}>
         <div className="details">

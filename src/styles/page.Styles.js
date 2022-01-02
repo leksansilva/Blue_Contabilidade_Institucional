@@ -174,3 +174,29 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.color.tertiary};
   }
 `;
+export const FloatButton = styled.div`
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 2;
+  background-color:${({ theme }) => theme.color.tertiary};
+  width: 4.5rem;
+  height:4.5rem;
+  border-radius:100%;
+  
+  
+  a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+  }
+  .wpp{
+    color: ${({ theme }) => theme.color.contrast};
+    width: 2.8rem;
+    height: auto;
+  }
+`
