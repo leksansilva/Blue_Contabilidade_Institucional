@@ -86,7 +86,7 @@ export default function Home() {
           </Card>
           <Card padding="0 15px 0 0">
             <Image
-              imageContainer={true}
+              
               opacity={0.8}
               height="100%"
               imageSize="55vw"
@@ -95,7 +95,7 @@ export default function Home() {
           </Card>
           <Card padding="0 0 0 15px" content="center" alignItems="center">
             <Image
-              imageContainer={true}
+              
               opacity={0.8}
               height="100%"
               imageSize="55vw"
@@ -138,7 +138,7 @@ export default function Home() {
           </Card>
           <Card padding="0 15px 0 0" content="center" alignItems="center">
             <Image
-              imageContainer={true}
+             
               opacity={0.8}
               height="100%"
               imageSize="55vw"
@@ -148,7 +148,7 @@ export default function Home() {
 
           <Card padding="0 0 0 15px" content="center" alignItems="center">
             <Image
-              imageContainer={true}
+              
               opacity={0.8}
               height="100%"
               imageSize="55vw"

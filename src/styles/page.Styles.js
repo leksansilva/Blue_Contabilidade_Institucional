@@ -56,7 +56,7 @@ export const Image = styled.div`
   width: ${({ width }) => (width ? width : "100%")};
   opacity: ${({ opacity }) => (opacity ? opacity : 1)};
   background-repeat: no-repeat;
-  background-position: ${({ position }) => (position ? position : "50%")};
+  background-position: ${({ position }) => (position ? position : "50% 10%")};
   top: 0;
   border-radius: ${({ borderRadius }) =>
     borderRadius ? borderRadius : "none"};
