@@ -60,7 +60,7 @@ export default function Header() {
           </Link>
         </li>
         <li>
-          <a className="Link" onClick={() => alert("Em breve!")}>
+          <a className="Link" href="https://blue-plataforma.vercel.app/">
             Nossa Plataforma
           </a>
         </li>
@@ -117,7 +117,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <a className="Link" onClick={() => alert("Em breve!")}>
+            <a className="Link" href="https://blue-plataforma.vercel.app/">
               Nossa Plataforma
             </a>
           </li>
